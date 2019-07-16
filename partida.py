@@ -112,19 +112,19 @@ class Partida:
         for i in range(len(self.table_players)):
             self.table_players[i].set_flop(flop)
             self.table_players[i].set_best_hand_flop()
-        return(None)
+        return None
         
     def set_turn(self, turn):
         for i in range(len(self.table_players)):
             self.table_players[i].set_turn(turn)
             self.table_players[i].set_best_hand_turn()
-        return(None)
+        return None 
         
     def set_river(self, river):
         for i in range(len(self.table_players)):
             self.table_players[i].set_river(river)
             self.table_players[i].set_best_hand_river()
-        return(None)
+        return None
     
     def set_bets(self, fase):
         self.actual_bet = 2*self.blind
@@ -156,7 +156,7 @@ class Partida:
     def reset_bet(self):
         for i in range(len(self.players)):
             self.players[i].set_bet(0)
-        return(None)
+        return None
         
     def rank_hand(self, fase):
         hand_list = numpy.zeros([len(self.table_players),7])
@@ -225,7 +225,7 @@ class Partida:
             if(self.pot == 1):
                 self.table_players[self.hand_list.iloc[0].loc['player']].cash_bet(self.pot)
                 self.pot = 0
-        return(None)
+        return None
     
     def players_count(self):
         count = 0

@@ -97,7 +97,7 @@ class Player:
         self.stack            -= pay
         self.bet              += pay
         self.accumulative_bet += pay
-        return(pay)
+        return pay
 
     def show_player(self):
         player_str = self.name
@@ -210,7 +210,7 @@ class Player_fish(Player):
     def __init__(self, name, ini_stack):
         Player.__init__(self, name, ini_stack)
         self.minbet = 2
-        return(None)
+        return None 
         
     def set_preflop_bet(self, min_bet):
         pay = 0
@@ -222,7 +222,7 @@ class Player_fish(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay 
 
     def set_flop_bet(self, min_bet):
         pay = 0
@@ -234,7 +234,7 @@ class Player_fish(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay
 
     def set_turn_bet(self, min_bet):
         pay = 0
@@ -246,7 +246,7 @@ class Player_fish(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay
 
     def set_river_bet(self, min_bet):
         pay = 0
@@ -258,12 +258,12 @@ class Player_fish(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay
 #####################################################################################################
 class Player_console(Player):
     def __init__(self, name, ini_stack):
         Player.__init__(self, name, ini_stack)
-        return(None)
+        return None
         
     def set_preflop_bet(self, min_bet):
         print("Preflop")
@@ -273,7 +273,7 @@ class Player_console(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay
 
     def set_flop_bet(self, min_bet):
         print("Flop")
@@ -283,7 +283,7 @@ class Player_console(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay
 
     def set_turn_bet(self, min_bet):
         print("Turn")
@@ -293,7 +293,7 @@ class Player_console(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay
 
     def set_river_bet(self, min_bet):
         print("River")
@@ -303,7 +303,7 @@ class Player_console(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay
 #####################################################################################################
 class Player_random(Player):
     def __init__(self, name, ini_stack, probabilidad):
@@ -311,7 +311,7 @@ class Player_random(Player):
         self.probabilidad = probabilidad
         self.minbet       = 5
         self.maxbet       = 10
-        return(None)
+        return None
     
     def set_preflop_bet(self, min_bet):
         pay = 0
@@ -331,7 +331,7 @@ class Player_random(Player):
             self.bet              += pay
             self.accumulative_bet += pay
             self.stack            -= pay 
-        return(pay)
+        return pay
 
     def set_flop_bet(self, min_bet):
         pay = 0
@@ -346,7 +346,7 @@ class Player_random(Player):
             self.bet              += pay
             self.accumulative_bet += pay
             self.stack            -= pay 
-        return(pay)
+        return pay
 
     def set_turn_bet(self, min_bet):
         pay = 0
@@ -361,7 +361,7 @@ class Player_random(Player):
             self.bet              += pay
             self.accumulative_bet += pay
             self.stack            -= pay 
-        return(pay)
+        return pay
 
     def set_river_bet(self, min_bet):
         pay = 0
@@ -376,14 +376,14 @@ class Player_random(Player):
             self.bet              += pay
             self.accumulative_bet += pay
             self.stack            -= pay 
-        return(pay)
+        return pay
 #####################################################################################################
 class Player_simple(Player):
     def __init__(self, name, ini_stack):
         Player.__init__(self, name, ini_stack)
         self.minbet = 5
         self.probabilidad = 0.5
-        return(None)
+        return None
     
     def set_preflop_bet(self, min_bet):
         rank = cards.rank_hand(self.hand)
@@ -396,7 +396,7 @@ class Player_simple(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay
 
     def set_flop_bet(self, min_bet):
         random_num = random.random()
@@ -409,7 +409,7 @@ class Player_simple(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay
 
     def set_turn_bet(self, min_bet):
         random_num = random.random()
@@ -422,7 +422,7 @@ class Player_simple(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay
 
     def set_river_bet(self, min_bet):
         random_num = random.random()
@@ -435,12 +435,12 @@ class Player_simple(Player):
         self.bet              += pay
         self.accumulative_bet += pay
         self.stack            -= pay
-        return(pay)
+        return pay
 #####################################################################################################
 class Player_aggresive(Player):
     def __init__(self, name, ini_stack):
         Player.__init__(self, name, ini_stack)
-        return(None)
+        return None
         
     def set_preflop_bet(self, min_bet):
         rank = cards.rank_hand(self.hand)
@@ -455,7 +455,7 @@ class Player_aggresive(Player):
             self.bet              += pay
             self.accumulative_bet += pay
             self.stack            -= pay
-        return(pay)
+        return pay
 
     def set_flop_bet(self, min_bet):
         pay = 0
@@ -467,7 +467,7 @@ class Player_aggresive(Player):
             self.bet              += pay
             self.accumulative_bet += pay
             self.stack            -= pay
-        return(pay)
+        return pay
 
     def set_turn_bet(self, min_bet):
         pay = 0
@@ -479,7 +479,7 @@ class Player_aggresive(Player):
             self.bet              += pay
             self.accumulative_bet += pay
             self.stack            -= pay
-        return(pay)
+        return pay
 
     def set_river_bet(self, min_bet):
         pay = 0
@@ -491,4 +491,4 @@ class Player_aggresive(Player):
             self.bet              += pay
             self.accumulative_bet += pay
             self.stack            -= pay
-        return(pay)
+        return pay
