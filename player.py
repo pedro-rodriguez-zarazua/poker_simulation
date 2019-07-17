@@ -167,7 +167,7 @@ class Player:
         for i in range(spc_num):
             player_str += " "
         player_str += str(self.accumulative_bet)
-        
+    
         print(player_str)
         return None 
         
@@ -378,7 +378,7 @@ class Player_random(Player):
             self.stack            -= pay 
         return pay
 #####################################################################################################
-class Player_simple(Player):
+class Player_simple(Player):    
     def __init__(self, name, ini_stack):
         Player.__init__(self, name, ini_stack)
         self.minbet = 5

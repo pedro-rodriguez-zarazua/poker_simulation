@@ -295,7 +295,7 @@ class Partida:
                     self.turn = self.deck.deal_hand(1)
                     self.set_turn(self.turn)
                     self.set_bets(etapa_de_partida)
-                
+            
                     hand_str += "    " + str(self.turn[0])
                     print(' ')
                     print('Turn')
@@ -388,7 +388,7 @@ class Partida:
             print('Clean Pot = ' + str(self.pot))
             
             self.reset_game()
-            
+        
             players_num = self.players_count()
             indice += 1
            
